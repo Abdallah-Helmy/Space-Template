@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cairo:wght@300;400;700;800&display=swap');
+
+
+ /* Start Global Styling */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    position: relative;
+    font-family: Bellefair;
+    background-image: url("../imgs/Bitmap\ \(1\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 75%;
+    margin: 20px auto;
+}
+/* End Global Styling */
+
+/* Start Nav Bar  */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+ /* Start Menu  */
+.nav .menu-icon {
+    position: relative;
+    width: 33px;
+    height: 19px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+.nav .menu-icon span:first-child {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 0;
+    transition: all .3s ease;
+}
+
+.rotate-span-one {
+    transform: rotate(45deg) translate(3px, 15px);
+}
+
+.nav .menu-icon span:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 11px;
+    transition: all .3s ease;
+}
+
+.hide-span {
+    display: none;
+}
+
+.nav .menu-icon span:last-child {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 22px;
+    transition: all .3s ease;
+}
+
+.rotate-span-two {
+    transform: rotate(-45deg) translate(0, -13px);
+}
+ /* End Menu  */
+
+/* Start Hidden Menu  */
+.nav .hidden-menu {
+    position: absolute;
+    height: 100%;
+    width: 50vh;
+    top: 86px;
+    right: 2000px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+}
+
+.show-toggle {
+    right: 0 !important;
+}
+
+
+.nav .hidden-menu ul {
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.nav .hidden-menu ul li {
+    list-style: none;
+    margin-top: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.nav .hidden-menu ul li:hover {
+    padding-bottom: 19px;
+    border-bottom: 4px solid rgba(250, 250, 250, .5);
+}
+
+.nav .hidden-menu ul li span {
+    font-size: 22px;
+    letter-spacing: 2.7px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.nav .hidden-menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22x;
+    letter-spacing: 2.7px;
+    color: #fff;
+}
+/* End Hidden Menu  */
+
+.nav .logo {
+    position: relative;
+}
+
+.nav .logo {
+    cursor: pointer;
+}
+
+.nav .logo img:last-child {
+    position: absolute;
+    left: 0;
+}
+
+.nav .nav-links {
+    position: relative;
+}
+
+.nav .nav-links::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -26px;
+    left: -93px;
+    width: 119%;
+    height: 69px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.nav .nav-links ul,
+.container .landing .down .info .nav-links ul {
+    display: flex;  
+}
+
+.nav .nav-links ul {
+    margin-right: 100px;
+}
+
+.nav .nav-links ul li,
+.container .landing .down .info .nav-links ul li {
+    list-style: none;
+    margin-right: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.nav .nav-links ul li:hover,
+.container .landing .down .info .nav-links ul li:hover {
+    padding-bottom: 19px;
+    border-bottom: 4px solid rgba(250, 250, 250, .5);
+    transition: all .3s ease;
+}
+
+.nav .nav-links ul li span,
+.container .landing .down .info .nav-links ul li span {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.nav .nav-links ul li a,
+.container .landing .down .info .nav-links ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: #fff;
+}
+.container .landing .down .info .nav-links ul li a {
+    pointer-events: none;
+}
+
+/* Active Class  */
+.active {
+    padding-bottom: 19px;
+    border-bottom: 4px solid #fff;
+}
+/* End Active Class  */
+/* End Nav Bar  */
+
+/* Start Landing  */
+.container {
+    height: 100%;
+}
+
+.container .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.container .landing .title {
+    display: flex;
+    align-items: center;
+}
+
+.container .landing .title span {
+    letter-spacing: 4.72px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    opacity: .5;
+}
+
+.container .landing .title h1 {
+    letter-spacing: 4.72px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    margin-left: 8px;
+    text-transform: uppercase   ;
+}
+
+.container .landing .down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.container .landing .down img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.container .landing .down .info{
+    margin-left: 136px;
+}
+
+.container .landing .down .info .planet-info h1 {
+    font-size: 100px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.container .landing .down .info .planet-info p {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #D0D6F9;
+    width: 79%;
+}
+
+.container .landing .down .info .planet-info p::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -22px;
+    background-color: #383B4B;
+}
+
+.container .landing .down .info .more-info {
+    display: flex;
+    flex-direction: column;
+    width: 88%; 
+    margin-top: 50px;
+}
+
+
+.container .landing .down .info .more-info .t-side {
+    display: flex;
+    justify-content: space-between;
+    color: #D0D6F9;
+    font-size: 14px;
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+}   
+
+.container .landing .down .info .more-info .d-side {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.container .landing .down .info .more-info .d-side h2:last-child{
+    margin-right: 45px;
+}
+/* End Landing  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Media Queries  */
+@media (max-width: 467px)  {
+    .container {
+        width: 91%;
+    }
+
+    .nav {
+        margin: 10px 40px;
+    }
+    
+    .nav .nav-links,
+    .nav .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing .title h1 {
+        letter-spacing: 1.72px;
+    }
+
+    .container .landing .down .info .planet-info h1 {
+        font-size: 64px;
+        letter-spacing: 11.5px;
+    }
+
+    .container .landing .down {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+    }
+
+    .container .landing .down img {
+        height: 170px;
+        width: 170px;
+    }
+
+    .container .landing .down .info {
+        margin-left: 0;
+    }
+
+    .container .landing .down .info .more-info {
+        width: 97%;
+    }
+
+    .container .landing .down .info .nav-links ul {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .container .landing .top span,
+    .container .landing .top h1 { 
+        font-size: 16px;
+        letter-spacing: 3.72px;
+    }
+
+    .container .landing .down .info .planet-info p {
+        width: 92%;
+        font-size: 16px;
+    }
+
+    .container .landing .down .info .more-info .t-side,
+    .container .landing .down .info .more-info .d-side {
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 468px) and (max-width: 519px)  {
+    .container {
+        width: 91%;
+    }
+
+    .nav {
+        margin: 10px 40px;
+    }
+    
+    .nav .nav-links,
+    .nav .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing .down .info .planet-info h1 {
+        font-size: 70px;    
+    }
+
+    .container .landing .down {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .landing .down img {
+        height: 200px;
+        width: 200px; 
+    }
+
+    .container .landing .down .info {
+        margin-left: 0;
+    }
+
+    .container .landing .down .info .planet-info p {
+        line-height: 27px;
+    }
+
+    .container .landing .down .info .nav-links ul {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .container .landing .top span,
+    .container .landing .top h1 { 
+        font-size: 16px;
+    }
+
+    .container .landing .down .info .planet-info p {
+        width: 100%;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 869px) {
+    .container {
+        width: 91%;
+    }
+
+    .nav {
+        margin: 10px 40px;
+    }
+    
+    .nav .nav-links,
+    .nav .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing .down .info .planet-info h1 {
+        font-size: 88px;    
+    }
+
+    .container .landing .down {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .landing .down img {
+        height: 215px;
+        width: 215px;   
+    }
+
+    .container .landing .down .info {
+        margin-left: 0;
+    }
+
+    .container .landing .down .info .nav-links ul {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .container .landing .top span,
+    .container .landing .top h1 { 
+        font-size: 17px;
+    }
+
+    .container .landing .down .info .planet-info p {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 869px) and (max-width: 920px) {
+    .container {
+        width: 91%;
+    }
+    
+    .nav .nav-links,
+    .nav .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing .down .info .planet-info h1 {
+        font-size: 88px;    
+    }
+}
+
+
+@media (min-width: 921px) and (max-width: 1064px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav .nav-links ul {
+        margin-right: 13px;
+    }
+}
+
+@media (min-width: 1065px) and (max-width: 1350px) {
+    .container {
+        width: 90%;
+    }  
+}
+/* End Media Queries  */

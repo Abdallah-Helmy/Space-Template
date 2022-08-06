@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cairo:wght@300;400;700;800&display=swap');
+
+
+ /* Start Global Styling */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    position: relative;
+    font-family: Bellefair;
+    background-image: url("imgs/Bitmap.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 75%;
+    margin: 20px auto;
+}
+/* End Global Styling */
+
+/* Start Nav Bar  */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+ /* Start Menu  */
+.nav .menu-icon {
+    position: relative;
+    width: 33px;
+    height: 19px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+.nav .menu-icon span:first-child {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 0;
+    transition: all .3s ease;
+}
+
+.rotate-span-one {
+    transform: rotate(45deg) translate(2px, 14px);
+}
+
+.nav .menu-icon span:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 11px;
+    transition: all .3s ease;
+}
+
+.hide-span {
+    display: none;
+}
+
+.nav .menu-icon span:last-child {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #D0D6F9;
+    top: 22px;
+    transition: all .3s ease;
+}
+
+.rotate-span-two {
+    transform: rotate(-45deg) translate(1px, -13px);
+}
+ /* End Menu  */
+
+/* Start Hidden Menu  */
+.nav .hidden-menu {
+    position: absolute;
+    height: 100%;
+    width: 50vh;
+    top: 86px;
+    right: 2000px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+}
+
+.show-toggle {
+    right: 0 !important;
+}
+
+
+.nav .hidden-menu ul {
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.nav .hidden-menu ul li {
+    list-style: none;
+    margin-top: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.nav .hidden-menu ul li:hover {
+    padding-bottom: 19px;
+    border-bottom: 4px solid rgba(250, 250, 250, .5);
+}
+
+.nav .hidden-menu ul li span {
+    font-size: 22px;
+    letter-spacing: 2.7px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.nav .hidden-menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22x;
+    letter-spacing: 2.7px;
+    color: #fff;
+}
+/* End Hidden Menu  */
+
+.nav .logo {
+    position: relative;
+}
+
+.nav .logo {
+    cursor: pointer;
+}
+
+.nav .logo img:last-child {
+    position: absolute;
+    left: 0;
+}
+
+.nav-links {
+    position: relative;
+}
+
+.nav-links::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -26px;
+    left: -93px;
+    width: 119%;
+    height: 69px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.nav .nav-links ul {
+    display: flex;  
+    margin-right: 100px;
+}
+
+.nav .nav-links ul li {
+    list-style: none;
+    margin-right: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.nav .nav-links ul li:hover {
+    padding-bottom: 19px;
+    border-bottom: 4px solid rgba(250, 250, 250, .5);
+}
+
+.nav .nav-links ul li span {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.nav .nav-links ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: #fff;
+}
+/* End Nav Bar  */
+
+/* Start Landing  */
+.container {    
+    height: 100%;
+    display: flex;
+}
+
+
+.container .landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.container .landing .left-sec {
+    width: 43%; 
+}
+
+.container .landing .left-sec h2 {
+    color: #D0D6F9;
+    font-size: 24px;
+    letter-spacing: 4.72px;
+}
+
+.container .landing .left-sec h1 {
+    font-size: 150px;
+    color: #fff;
+}
+
+.container .landing .left-sec p {
+    color: #D0D6F9;
+    font-size: 18px;
+    line-height: 38px;
+}
+
+.container .landing .right-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    letter-spacing: 2px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+
+.container .landing .right-sec:hover {
+    box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, .1) ;
+}
+/* End Landing  */
+
+
+/* Start Active Class */
+.active {
+    padding-bottom: 19px;
+    border-bottom: 4px solid #fff;
+}
+/* End Active Class */
+
+
+/* Start Media Queries */
+@media (max-width: 449px) {
+    .container {
+        width: 100%;
+    }
+    
+    .nav-links,
+        .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 26px;
+        justify-content: space-around;
+    }
+    .container .landing .left-sec {
+        width: 91%;
+    }
+
+    .container .landing .left-sec h2 {
+        font-size: 22px;
+        margin-left: 5px;
+        letter-spacing: .5px;
+    }
+    .container .landing .left-sec h1 {
+        font-size: 102px;
+        line-height: 183px;
+    }
+
+    .container .landing .left-sec p {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1.2px;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 685px)  {
+    .container {
+        width: 100%;
+    }
+    
+    .nav-links,
+        .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 26px;
+    }
+
+    .container .landing .left-sec {
+        width: 65%;
+    }
+
+    .container .landing .left-sec h2 {
+        font-size: 19px;
+        margin-left: 5px;
+        letter-spacing: .5px;
+    }
+    .container .landing .left-sec h1 {
+        font-size: 106px;
+        line-height: 149px;
+    }
+
+    .container .landing .left-sec p {
+        font-size: 19px;
+        line-height: 28px;
+    }
+}
+
+@media (min-width: 686px) and (max-width: 963px) {
+    .container {
+        width: 100%;
+    }
+    
+    .nav-links,
+    .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 26px;
+    }
+
+    .container .landing .left-sec {
+        width: 65%;
+    }
+
+    .container .landing .left-sec h2 {
+        font-size: 20px;
+        letter-spacing: .5px;
+    }
+    .container .landing .left-sec h1 {
+        font-size: 106px;
+        line-height: 149px; 
+    }
+
+    .container .landing .left-sec p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    
+}
+
+@media (min-width: 964px) and (max-width: 1094px) {
+    .container {
+        width: 100%;
+    }
+
+    .nav .nav-links ul {
+        margin-right: 0;
+    }
+
+    .nav .nav-links ul li a {
+        font-size: 13px;
+    }
+
+    .nav-links::before {
+        left: -69px;
+    }
+
+    .container .landing {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 26px;
+    }
+
+    .container .landing .left-sec h2 {
+        font-size: 21px;
+        letter-spacing: .5px;
+    }
+    .container .landing .left-sec h1 {
+        font-size: 112px;
+        line-height: 153px;
+    }
+
+    .container .landing .left-sec p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media (min-width: 1095px) and (max-width: 1250px) {
+    .nav .nav-links ul {
+        margin-right: 0;
+    }
+
+    .nav-links::before {
+        left: -69px;
+    }
+    
+    .container .landing .left-sec h2 {
+        letter-spacing: 0.5px;
+    }
+
+    .container .landing .left-sec h1 {
+        font-size: 126px;
+    }
+}
+/* End Media Queries */
+
+
+
+
+
