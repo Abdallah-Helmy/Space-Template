@@ -286,7 +286,7 @@ body {
 
 /* Start Media Queries */
 @media (max-width: 379px) {
-    .container {
+    .container { 
         width: 100%;
     }
     
