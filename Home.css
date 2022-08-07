@@ -266,8 +266,68 @@ body {
 /* End Active Class */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Start Media Queries */
-@media (max-width: 449px) {
+@media (max-width: 379px) {
+    .container {
+        width: 100%;
+    }
+    
+    .nav-links,
+        .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 26px;
+        justify-content: space-around;
+    }
+    .container .landing .left-sec {
+        width: 91%;
+    }
+
+    .container .landing .left-sec h2 {
+        font-size: 22px;
+        margin-left: 5px;
+        letter-spacing: .5px;
+    }
+    .container .landing .left-sec h1 {
+        font-size: 99px;
+        line-height: 121px;
+    }
+
+    .container .landing .left-sec p {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1.2px;
+    }
+}
+
+
+@media (min-width: 380px) and (max-width: 449px) {
     .container {
         width: 100%;
     }
