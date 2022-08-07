@@ -349,7 +349,7 @@ body {
 
 
 /* Start Media Queries  */
-@media (max-width: 467px)  {
+@media (max-width: 379px) {
     .container {
         width: 91%;
     }
@@ -369,6 +369,77 @@ body {
 
     .container .landing .title h1 {
         letter-spacing: 1.72px;
+        font-size: 19px;
+    }
+
+    .container .landing .down .info .planet-info h1 {
+        font-size: 56px;
+        letter-spacing: 11.5px;
+    }
+
+    .container .landing .down {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+    }
+
+    .container .landing .down img {
+        height: 170px;
+        width: 170px;
+    }
+
+    .container .landing .down .info {
+        margin-left: 0;
+    }
+
+    .container .landing .down .info .more-info {
+        width: 103%;
+        margin-top: 34px;
+    }
+
+    .container .landing .down .info .nav-links ul {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .container .landing .top span,
+    .container .landing .top h1 { 
+        font-size: 16px;
+        letter-spacing: 3.72px;
+    }
+
+    .container .landing .down .info .planet-info p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .container .landing .down .info .more-info .t-side,
+    .container .landing .down .info .more-info .d-side {
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 467px)  {
+    .container {
+        width: 91%;
+    }
+
+    .nav {
+        margin: 10px 40px;
+    }
+    
+    .nav .nav-links,
+    .nav .nav-links::before {
+        display: none;
+    }
+
+    .nav .menu-icon{
+        display: block;
+    }
+
+    .container .landing .title h1 {
+        letter-spacing: 1.72px;
+        font-size: 22px;
     }
 
     .container .landing .down .info .planet-info h1 {
